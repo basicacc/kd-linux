@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="_USB4_DOMAIN_ID">
+        <DisplayString Condition="(Common.Format == 1)">PCI [{Pci.BusNumber,d}.{Pci.DeviceNumber,d}.{Pci.FunctionNumber,d}] ({AsUInt32})</DisplayString>
+        <DisplayString Condition="(Common.Format == 2)">ACPI [{Acpi.ID}] ({AsUInt32})</DisplayString>
+        <DisplayString Condition="(Common.Format != 1) &amp;&amp; (Common.Format != 2)">{AsUInt32}</DisplayString>
+    </Type>
+    <Type Name="_USB4_TOPOLOGY_ID">
+        <DisplayString>[{Port[0],d}.{Port[1],d}.{Port[2],d}.{Port[3],d}.{Port[4],d}.{Port[5],d}.{Port[6],d}]</DisplayString>
+    </Type>
+</AutoVisualizer>

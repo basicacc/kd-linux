@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# kd - Windows kernel debugger via Wine (KDNET)
+# Usage: ./kd [port] [key]
+#   port defaults to 50000
+#   key  defaults to 1.2.3.4
+
+set -euo pipefail
+
+DIR="$(cd "$(dirname "$0")/windbg" && pwd)"
+PORT="${1:-50000}"
+KEY="${2:-1.2.3.4}"
+shift "$(( $# > 0 ? 1 : 0 ))"
+shift "$(( $# > 0 ? 1 : 0 ))"
+
+export WINEDLLOVERRIDES="ws2_32=n,b;dbgeng=n;dbghelp=n;dbgmodel=n;dbgcore=n;symsrv=n;srcsrv=n;msdia140=n"
+export WINEDEBUG=-all
+export EGL_LOG_LEVEL=fatal
+export MESA_DEBUG=silent
+export LIBGL_DEBUG=quiet
+
+# Raw mode: no terminal echo (kdwrap handles echo through the
+# output pipe), characters sent immediately (no line buffering).
+if [[ -t 0 ]]; then
+    saved_tty="$(stty -g)"
+    trap 'stty "$saved_tty" 2>/dev/null' EXIT INT TERM
+    stty -echo -icanon min 1 time 0
+fi
+
+exec wine "$DIR/kdwrap.exe" "$DIR/kd.exe" -b "$@" \
+    -k "net:port=$PORT,key=$KEY"

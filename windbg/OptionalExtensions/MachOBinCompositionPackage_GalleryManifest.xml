@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>MachOBinCompositionPackage</Name>
+    <Version>$#Engine_version#$</Version>
+    <MinDebuggerSupported>10.0.17074.1002</MinDebuggerSupported>
+    <Components>
+        <BinaryComponent Name="MachOBinComposition" Type="Engine">
+            <LoadTriggers>
+                <TriggerSet>
+                    <IdentifyTargetTrigger FileExtension="*" />
+                </TriggerSet>
+            </LoadTriggers>
+            <Files>
+                <File Architecture="Any" Module="winext\MachOBinComposition.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

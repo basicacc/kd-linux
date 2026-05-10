@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+  <ExtensionPackage>
+    <Name>Bookmarks</Name>
+    <Version>$#Engine_version#$</Version>
+    <MinDebuggerSupported>10.0.17074.1002</MinDebuggerSupported>
+    <Components>
+        <ScriptComponent Name="Bookmarks" Type="Engine" File="TTD\bookmarks.js">
+            <ObjectExtensionList>
+                <NamedExtension Name="TTDAnalyze" />
+            </ObjectExtensionList>
+        </ScriptComponent>
+    </Components>
+  </ExtensionPackage>
+</ExtensionPackages>

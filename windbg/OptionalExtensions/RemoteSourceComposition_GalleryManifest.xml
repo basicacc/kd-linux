@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+  <ExtensionPackage>
+    <Name>RemoteSourceCompositionPackage</Name>
+    <Version>$#Engine_version#$</Version>
+    <MinDebuggerSupported>10.0.17074.1002</MinDebuggerSupported>
+    <Components>
+        <BinaryComponent Name="RemoteSourceComposition" Type="Engine">
+            <EngineCommands>
+                <EngineCommand Name="enableremotesourceplugin">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!enableremotesource]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Enables the target composition plug-in for remote source.  This allows manual specification of local source to remote location mappings similar to SourceLink.]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>    
+                <EngineCommand Name="addsourcemap">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!addsourcemap <module> <local spec> <remote spec>]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Manually adds a source mapping from a local build path to a remote URL for a given module.  This allows for manual specification of how to find matching source files similar to SourceLink.  An example: !addsourcemap vmlinux /build/linux/* https://raw.githubusercontent.com/torvalds/linux/6e61dde82e8bfe65e8ebbe43da45e615bc529236/*]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>    
+                <EngineCommand Name="removesourcemaps">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!removesourcemaps <module> <local spec>]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Removes a source mapping as added by a prior invocation of the !addsourcemap command.  An example: !removesourcemaps vmlinux /build/linux/*]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>    
+                <EngineCommand Name="sourcemaps">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!sourcemaps]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Lists all source mappings that have been added with the !addsourcemap command.  An example: !sourcemaps]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>    
+            </EngineCommands>
+            <Files>
+                <File Architecture="Any" Module="winext\RemoteSourceComposition.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+        </BinaryComponent>
+    </Components>
+  </ExtensionPackage>
+</ExtensionPackages>

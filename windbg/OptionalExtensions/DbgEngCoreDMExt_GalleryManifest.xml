@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>DbgEngCoreDMExt</Name>
+    <Version>$#Engine_version#$</Version>
+    <MinDebuggerSupported>10.0.18320.1000</MinDebuggerSupported>
+    <Description></Description>
+    <Components>
+        <BinaryComponent Name="DbgEngCoreDMExt" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\DbgEngCoreDMExt.dll" FilePathKind="RepositoryRelative" />
+            </Files>
+            <ObjectExtensionList>
+                <NamedExtension Name="Debugger.Models.Session" Namespace="Debugger.Models.Session.OS" Property="OS" />
+                <NamedExtension Name="Debugger.Models.Stack" Namespace="Debugger.Models.Stack.Attributes" Property="Attributes" />
+                <NamedExtension Name="Debugger.Models.Module" Namespace="Debugger.Models.Module.Attributes" Property="Attributes" />
+                <NamedExtension Name="Debugger.Models.Process" Namespace="Debugger.Models.Process.Attributes" Property="Attributes" />
+
+                <!-- Models parents are registered after namespaces -->
+                <NamedExtension Name="Debugger.Models.Debugger" />
+                <NamedExtension Name="Debugger.Models.Module" />
+                <NamedExtension Name="Debugger.Models.Session" />
+                <NamedExtension Name="Debugger.Models.Thread" />
+                <NamedExtension Name="Debugger.Models.Utility.Symbols" />
+            </ObjectExtensionList>
+
+            <PublishedObjectList>
+               <NamedObject Name="Debugger.Models.Module" Namespace="Debugger.Models.Module.Attributes" Property="Attributes" />
+               <NamedObject Name="Debugger.Models.Process" Namespace="Debugger.Models.Process.Attributes" Property="Attributes" />
+               <NamedObject Name="Debugger.Models.Session" Namespace="Debugger.Models.Session.OS" Property="OS" />
+               <NamedObject Name="Debugger.Models.Stack" Namespace="Debugger.Models.Stack.Attributes" Property="Attributes" />
+            </PublishedObjectList>
+        </BinaryComponent>
+        <ScriptComponent Name="TargetMachineInfo" Type="Engine" File="winext\ApiExtension\TargetMachineInfo.js" FilePathKind="RepositoryRelative">
+          <LoadTriggers>
+              <TriggerSet>
+                  <OSTrigger Name="Windows" />
+              </TriggerSet>
+          </LoadTriggers>
+          <ObjectExtensionList>
+            <NamedExtension Name="Debugger.Models.Process.Environment" />
+          </ObjectExtensionList>
+        </ScriptComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

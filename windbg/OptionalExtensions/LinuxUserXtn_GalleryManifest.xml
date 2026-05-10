@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackage>
+    <Name>LinuxUserXtn</Name>
+    <Version>$#Engine_version#$</Version>
+    <MinDebuggerSupported>10.0.17069.1001</MinDebuggerSupported>
+    <Description>Provides key extensions and data for Linux user mode targets</Description>
+    <Size>1</Size>
+    <Components>
+        <BinaryComponent Name="LinuxUserXtn" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\LinuxUserXtn.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <LoadTriggers>
+                <TriggerSet>
+                    <OSTrigger Name="Linux" />
+                    <TargetTrigger Type="User" />
+                </TriggerSet>
+            </LoadTriggers>
+            <EngineCommands>
+                <EngineCommand Name="heap">
+                    <EngineCommandItem>
+                        <Syntax>!heap [-s] [selector: (-ar arena / -h heap / -all)]</Syntax>
+                        <Description>Shows heap allocations in the native heap</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+            </EngineCommands>
+            <ObjectExtensionList>
+                <NamedExtension Name="Debugger.Models.Process" Namespace="Debugger.Models.Process.Memory" Property="Memory" />
+            </ObjectExtensionList>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+

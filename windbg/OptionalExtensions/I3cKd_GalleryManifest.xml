@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>i3ckd</Name>
+    <Version>$#Engine_version#$</Version>
+    <Components>
+        <BinaryComponent Name="i3ckd" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\i3ckd.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <EngineCommands>
+              <EngineCommand Name="i3ccommanddescriptor">
+                  <EngineCommandItem>
+                      <Syntax>!i3ccommanddescriptor</Syntax>
+                      <Description>Decodes/displays an I3C CommandDescriptor</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="i3chcd">
+                  <EngineCommandItem>
+                      <Syntax>!i3chcd</Syntax>
+                      <Description>Displays information about the I3C HostController-Device.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="i3chci">
+                  <EngineCommandItem>
+                      <Syntax>!i3chci</Syntax>
+                      <Description>Displays information about the I3C HostController-Instance.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="i3chelp">
+                  <EngineCommandItem>
+                      <Syntax>!i3chelp</Syntax>
+                      <Description>Displays information on available extension commands.  Alias to !i3ckd.help</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="i3cprovisionedid">
+                  <EngineCommandItem>
+                      <Syntax>!i3cprovisionedid</Syntax>
+                      <Description>Decodes/displays an I3C CommandDescriptor</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="i3ctarget">
+                  <EngineCommandItem>
+                      <Syntax>!i3ctarget</Syntax>
+                      <Description>Displays information about the I3C Target.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="i3ctree">
+                  <EngineCommandItem>
+                      <Syntax>!i3ctree</Syntax>
+                      <Description>Dumps I3C hierarchy</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+            </EngineCommands>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

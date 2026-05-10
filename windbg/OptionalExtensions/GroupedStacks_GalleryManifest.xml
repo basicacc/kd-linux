@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>GroupedStacks</Name>
+    <Version>$#Engine_version#$</Version>
+    <MinDebuggerSupported>10.0.16361.1000</MinDebuggerSupported>
+    <Description>Provides a parallel stacks view based on graph visualization</Description>
+    <Components>
+        <ScriptComponent Name="GroupedStacks" Type="Engine" File="winext\GroupedStacks\GroupedStacks.js" FilePathKind="RepositoryRelative">
+            <ObjectExtensionList>
+                <NamedExtension Name="Debugger.Models.Process" />
+            </ObjectExtensionList>
+        </ScriptComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

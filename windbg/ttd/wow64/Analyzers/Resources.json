@@ -1,0 +1,31 @@
+{
+  "HeapMemory": {
+    "createfunc": [
+      {
+        "name": "ntdll!RtlAllocateHeap",
+        "destination": "ret",
+        "size": "arg2"
+      }
+    ],
+    "destroyfunc": [
+      {
+        "name": "ntdll!RtlFreeHeap",
+        "source": "arg2"
+      }
+    ],
+    "movefunc": [
+      {
+        "name": "ntdll!RtlReAllocateHeap",
+        "source": "arg2",
+        "destination": "ret",
+        "size": "arg3"
+      }
+    ],
+    "copyfunc": [
+
+    ],
+    "accessorfunc": [
+
+    ]
+  }
+}

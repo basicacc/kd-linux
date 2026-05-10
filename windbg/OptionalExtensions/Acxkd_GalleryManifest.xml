@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackage>
+    <Name>AcxKd</Name>
+    <!-- Version will be filled by Debugger team before extension package is published -->
+    <Version>$#Engine_version#$</Version>
+    <Components>
+        <BinaryComponent Name="AcxKd" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\acxkd.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <EngineCommands>
+                <EngineCommand Name="acxcircuit">
+                    <EngineCommandItem>
+                        <Syntax>!acxcircuit</Syntax>
+                        <Description>Dump information about a ACXCIRCUIT</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxdataformat">
+                    <EngineCommandItem>
+                        <Syntax>!acxdataformat</Syntax>
+                        <Description>Dump information about a ACXDATAFORMAT</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxdataformatlist">
+                    <EngineCommandItem>
+                        <Syntax>!acxdataformatlist</Syntax>
+                        <Description>Dump information about a ACXDATAFORMATLIST</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxdevice">
+                    <EngineCommandItem>
+                        <Syntax>!acxdevice</Syntax>
+                        <Description>Dump information about an audio WDFDEVICE</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxelement">
+                    <EngineCommandItem>
+                        <Syntax>!acxelement</Syntax>
+                        <Description>Dump information about a ACXELEMENT</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxevents">
+                    <EngineCommandItem>
+                        <Syntax>!acxevents</Syntax>
+                        <Description>Dump events information about a ACXOBJECT</Description>
+                    </EngineCommandItem>
+                </EngineCommand>         
+                <EngineCommand Name="acxfactory">
+                    <EngineCommandItem>
+                        <Syntax>!acxfactory</Syntax>
+                        <Description>Dump information about a ACXFACTORYCIRCUIT</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxmanager">
+                    <EngineCommandItem>
+                        <Syntax>!acxmanager</Syntax>
+                        <Description>Dump information about a ACXMANAGER</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxmethods">
+                    <EngineCommandItem>
+                        <Syntax>!acxmethods</Syntax>
+                        <Description>Dump methods information about a ACXOBJECT</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxobjbag">
+                    <EngineCommandItem>
+                        <Syntax>!acxobjbag</Syntax>
+                        <Description>Dump information about a ACXOBJECTBAG</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxobject">
+                    <EngineCommandItem>
+                        <Syntax>!acxobject</Syntax>
+                        <Description>Dump information about a ACXOBJECT</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxpin">
+                    <EngineCommandItem>
+                        <Syntax>!acxpin</Syntax>
+                        <Description>Dump information about a ACXPIN</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxproperties">
+                    <EngineCommandItem>
+                        <Syntax>!acxproperties</Syntax>
+                        <Description>Dump properties information about a ACXOBJECT</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxstream">
+                    <EngineCommandItem>
+                        <Syntax>!acxstream</Syntax>
+                        <Description>Dump information about a ACXSTREAM</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxstreambridge">
+                    <EngineCommandItem>
+                        <Syntax>!acxstreambridge</Syntax>
+                        <Description>Dump information about a ACXSTREAMBRIDGE</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxtarget">
+                    <EngineCommandItem>
+                        <Syntax>!acxtarget</Syntax>
+                        <Description>Dump information about a ACXTARGET*</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="acxtemplate">
+                    <EngineCommandItem>
+                        <Syntax>!acxtemplate</Syntax>
+                        <Description>Dump information about a ACX*TEMPLATE</Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+            </EngineCommands>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+
