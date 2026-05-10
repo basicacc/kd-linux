@@ -232,5 +232,4 @@ if it says `Symbol Type: PDB - Symbols loaded successfully` you're good. the pdb
 ## references
 
 - wine bug #47233 (the wrong trail everyone followed): https://bugs.winehq.org/show_bug.cgi?id=47233
-- osr on kdnet + qemu hyper-v issue: https://www.osr.com/blog/2021/10/05/using-windbg-over-kdnet-on-qemu-kvm/
 - 2011 serial port attempt (barely worked, com transport only): http://polytechnitis.blogspot.com/2011/04/kernel-debugging-qemu-windows-vm-from.html
